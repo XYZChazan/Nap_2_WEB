@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Página 2 - Inscrição</title>
+    
+    <style>
+	main{
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+    	align-items: center;
+    	justify-content: center;
+	}
+	
+    h1 {
+        color: white;
+        font-size: 20px;
+        
+        
+      }
+      
+      .conteudo{
+      	background-color:grey;
+      	display: flex;
+      	flex-direction: column;
+    	align-items: center;
+      	width: 22rem;
+        height: 15rem;
+        border-radius: 10px;
+      }
+      
+      .campos{
+        width: 22rem;
+        height: 10rem;
+        display: flex;
+        align-items: center;
+   	   justify-content: space-evenly;
+      }
+      
+      input{
+      width: 15rem;
+      margin-bottom: 1rem;
+      height: 2rem;
+      }
+      
+      button{
+      width: 7rem;
+      margin-top:1rem;
+      }
+      
+      .buttons{
+      display:flex;
+      justify-content: space-evenly;
+      }
+      
+      a{
+      margin-top:3rem;
+      }
+      
+      
+    </style>
+  </head>
+  <body>
+  <main>
+  	<div class="conteudo">
+	    <h1>Etapa 2</h1>
+		    <div class="campos">
+			    <form action="ArmazenaDadosServlet" method="post">
+			    
+			      
+			      <input type="date"  name="dataNascimento"><br><br>
+			      
+			      <input type="text" name="endereco" placeholder="Digite seu endereço..." ><br><br>
+			      
+			      <div class="buttons">
+					
+			      	<button type="submit">Próxima Página</button>
+				  </div>
+			         
+		    </form>
+		    
+		    
+    	</div>
+    	
+    	<a href="http://localhost:8080/Nap_2/paginaUmInscricao.html">
+			<button>Voltar</button></a>
+    </div>
+  </main>
+  </body>
+</html>
