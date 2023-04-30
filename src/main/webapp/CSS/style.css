@@ -1,0 +1,100 @@
+body{
+padding: 0;
+margin: 0;
+}
+
+
+.nav-principal{
+    background-color: #ffffff;
+    z-index: 1;
+    top: 0px;
+    display: flex;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    justify-content: flex-end;
+    position: sticky;
+    align-items: center;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+    height: 30px;
+}
+
+.nav-link{
+    padding: 10px 16px;
+    text-decoration-line: none;
+    overflow: hidden;
+    color: hsla(210, 26%, 7%, 0.7);
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    text-overflow: ellipsis;
+    margin-right: auto;
+}
+
+.card-container{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: fit-content;
+}
+
+.card {
+   width: 150px;
+   height: 298px;
+   margin: 20px;
+   text-align: center;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   overflow: hidden;
+   background-color: #eee;
+   border-radius: 10px;
+}
+
+.card img{
+     width: 97px;
+     height: 161px;
+
+}
+
+h2{
+    margin: 1px 0px;
+    font-size: 16px;
+}
+
+.preco{
+    text-align: right;
+    margin: 3px 2px 0 0;
+    font-size: 12px;
+}
+
+.detalhe{
+    font-size: 12px;
+    margin: 1px 0 1px 0;
+}
+
+
+.livro-container {
+  display: flex;
+  align-items: center;
+
+.livro-info {
+  margin-left: 20px;
+}
+
+.livro-info h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.livro-info p {
+  font-size: 10px;
+  margin: 0 0 2px 0;
+}
+
+.precoLivro{
+    margin-bottom: 10px;
+}
+
+
+
+
