@@ -2,6 +2,7 @@
 
 import java.io.IOException;
 import java.net.URLDecoder;
+import java.util.Map;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -28,14 +29,40 @@ public class ArmazenaDadosServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 		response.setContentType("text/html");
+		request.setCharacterEncoding("UTF-8");
         
         //pega os parametros dos formularios
-		//pega os parametros dos formularios
+		
+		Cookie cookieNome = null;
+        
+        Cookie cookieTelefone = null;
+        
+        Cookie cookieDataNascimento = null;
+        
+        Cookie cookieEndereco = null;
+		
         String nome = request.getParameter("nome");
-        System.out.println("nome: " + nome); // Debugging
+        System.out.println("nome: " + nome); 
         
         String telefone = request.getParameter("telefone");
-        System.out.println("telefone: " + telefone); // Debugging
+        System.out.println("telefone: " + telefone); 
+        
+        if(nome != null && telefone != null) {
+        	
+	        cookieNome = new Cookie("nome", nome);
+	        
+	        cookieNome.setMaxAge(60*60);
+	        
+	        cookieTelefone = new Cookie("telefone", telefone );
+	        
+	        cookieTelefone.setMaxAge(60*60);
+	        
+	        response.addCookie(cookieNome);
+	        response.addCookie(cookieTelefone);
+	        
+	        response.sendRedirect("paginaDoisInscricao.html");
+        
+        }
         
         String dataNascimento = request.getParameter("dataNascimento");
         System.out.println("data de nascimento: " + dataNascimento); // Debugging
@@ -43,42 +70,41 @@ public class ArmazenaDadosServlet extends HttpServlet {
         String endereco = request.getParameter("endereco");
         System.out.println("endereço: " + endereco); // Debugging
         
-        String[] areasAtuacao = request.getParameterValues("areasAtuacao");
-        if (areasAtuacao != null) {
-            for (String area : areasAtuacao) {
-                System.out.println("área de atuação: " + area); // Debugging
+        if(dataNascimento != null && endereco != null) {
+        	
+        	cookieDataNascimento = new Cookie("dataNascimento", dataNascimento);
+            
+        	cookieDataNascimento.setMaxAge(60*60);
+            
+            cookieEndereco = new Cookie("endereco", endereco);
+            
+            cookieEndereco.setMaxAge(60*60);
+            
+            response.addCookie(cookieDataNascimento);
+            response.addCookie(cookieEndereco);
+            
+            response.sendRedirect("paginaTresInscricao.html");
+               
+        }
+        
+        Cookie[] cookies = null;
+        String[] areasSelecionadas = request.getParameterValues("areasAtuacao");
+        if (areasSelecionadas != null) {
+            cookies = new Cookie[areasSelecionadas.length];
+            for (int i = 0; i < areasSelecionadas.length; i++) {
+                cookies[i] = new Cookie("AreasAtuacao", areasSelecionadas[i]);
+                response.addCookie(cookies[i]);
+                System.out.println("areasSelecionadas: " + areasSelecionadas); // Debugging
             }
+            
+         // direciona para a página 4
+            
+            response.sendRedirect("paginaQuatroInscricao.jsp");
+            
         }
         
         
         
-        // Criação dos cookies com os valores dos parâmetros
-        Cookie cookieNome = new Cookie("nome", nome != null ? nome : "");
-        cookieNome.setMaxAge(60*60);
-        
-        Cookie cookieTelefone = new Cookie("telefone", telefone != null ? telefone : "");
-        cookieTelefone.setMaxAge(60*60);
-        
-        Cookie cookieDataNascimento = new Cookie("dataNascimento", dataNascimento != null ? dataNascimento : "");
-        cookieDataNascimento.setMaxAge(60*60);
-        
-        Cookie cookieEndereco = new Cookie("endereco", endereco != null ? endereco : "");
-        cookieEndereco.setMaxAge(60*60);
-        
-        
-        
-        // Adiciona os cookies à resposta
-        response.addCookie(cookieNome);
-        response.addCookie(cookieTelefone);
-        response.addCookie(cookieDataNascimento);
-        response.addCookie(cookieEndereco);
-        if (cookieNome != null && cookieNome != null) {
-        	response.sendRedirect("paginaDoisInscricao.html");
-        }
-        // direciona para a página 4
-        if (nome != null && telefone != null && dataNascimento != null && endereco != null) {
-        response.sendRedirect("paginaQuatroInscricao.jsp");
-        }
 }
 
 }
