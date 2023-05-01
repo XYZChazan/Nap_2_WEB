@@ -19,7 +19,7 @@
 
 
 <div class="livro-container">
-    <img src="${livro.linkImagem}" alt="Imagem do produto" style="height: 150px">
+    <img src="${livro.linkImagem}" alt="Imagem do produto" style="height: 370px">
     <div class="livro-info">
         <h2 class="titulo">${livro.nomeLivro}</h2>
          <p class="precoLivro">R$ ${livro.preco}</p>

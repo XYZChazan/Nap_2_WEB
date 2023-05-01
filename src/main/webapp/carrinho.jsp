@@ -8,6 +8,7 @@
     <meta charset="utf-8">
     <title>Loja</title>
     <link rel="stylesheet" href="/src/main/webapp/CSS/style2.css">
+    <link rel="stylesheet" href="/src/main/webapp/CSS/style.css">
 </head>
 <body>
 

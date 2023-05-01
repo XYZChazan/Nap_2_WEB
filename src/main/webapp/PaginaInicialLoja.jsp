@@ -17,29 +17,26 @@
       </ul>
     </nav>
 
-
-    <c:forEach  var="linha" items="${listar}" >
-
-        <div class="card-container">
-          <div class="card">
-            <img src="${linha.linkImagem}" alt="Imagem do produto">
-            <h2>${linha.nomeLivro}</h2>
-            <p class="preco">R$ ${linha.preco}</p>
-            <p class="detalhe">${linha.detalhe}</p>
-            <div class="botoes">
-            <form action="/carrinho-servlet" method="post">
-              <input type="hidden" name="id" value="${linha.id}">
-              <button type="submit" name="tipoOperacao" value="adicionar">Adicionar ao carrinho</button>
-            </form>
-            <form action="/detalhe-servlet" method="get">
-              <input type="hidden" name="id" value="${linha.id}">
-              <button type="submit">Detalhar</button>
-            </form>
-            </div>
-          </div>
-        </div>
-
-    </c:forEach>
+    <div class="card-container">
+        <c:forEach  var="linha" items="${listar}" >
+              <div class="card">
+                <img src="${linha.linkImagem}" alt="Imagem do produto">
+                <h2>${linha.nomeLivro}</h2>
+                <p class="preco">R$ ${linha.preco}</p>
+                <p class="detalhe">${linha.detalhe}</p>
+                <div class="botoes">
+                <form action="/carrinho-servlet" method="post">
+                  <input type="hidden" name="id" value="${linha.id}">
+                  <button type="submit" name="tipoOperacao" value="adicionar">Adicionar ao carrinho</button>
+                </form>
+                <form action="/detalhe-servlet" method="get">
+                  <input type="hidden" name="id" value="${linha.id}">
+                  <button type="submit">Detalhar</button>
+                </form>
+                </div>
+              </div>
+        </c:forEach>
+    </div>
 
 </body>
 </html>
