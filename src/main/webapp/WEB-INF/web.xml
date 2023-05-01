@@ -9,5 +9,13 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
-
+	<servlet>
+    <servlet-name>ArmazenaDadosServlet</servlet-name>
+    <servlet-class>br.com.ufra.Servlet.ArmazenaDadosServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+    <servlet-name>ArmazenaDadosServlet</servlet-name>
+    <url-pattern>/Nap_2/ArmazenaDadosServlet</url-pattern>
+</servlet-mapping>
 </web-app>
