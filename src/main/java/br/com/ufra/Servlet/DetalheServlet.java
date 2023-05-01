@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 
-@WebServlet(name = "detalheServlet", value = "/Nap_2/detalhe-servlet")
+@WebServlet(name = "detalheServlet", value = "/detalhe-servlet")
 public class DetalheServlet extends HttpServlet {
 
     /**
@@ -39,7 +39,7 @@ public class DetalheServlet extends HttpServlet {
         LivroModel livro = this.livros.stream().filter(livroModel -> livroModel.getId() == reqId).findFirst().orElse(null);
 
         try {
-            RequestDispatcher dispatcher = req.getRequestDispatcher("/src/main/webapp/detalheLivro.jsp");
+            RequestDispatcher dispatcher = req.getRequestDispatcher("/detalheLivro.jsp");
             req.setAttribute("livro", livro);
             dispatcher.forward(req, resp);
         }catch (Exception e){

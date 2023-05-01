@@ -14,7 +14,7 @@
 
     <nav class="nav-principal">
       <ul style="display: flex; list-style-type: none;">
-        <li><a class="nav-link" href="/Nap_2/carrinho-servlet">Pagina inicial</a></li>
+        <li><a class="nav-link" href="/Nap_2/carrinho-servlet"">Pagina inicial</a></li>
         <li><a class="nav-link" href="#">Carrinho</a></li>
       </ul>
     </nav>

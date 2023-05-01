@@ -17,7 +17,7 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 
 
-@WebServlet(name = "carrinhoDeComprasServlet", value = "/Nap_2/carrinho-compras")
+@WebServlet(name = "carrinhoDeComprasServlet", value = "/carrinho-compras")
 public class CarrinhoDeCompras extends HttpServlet {
 
     /**
@@ -39,7 +39,7 @@ public class CarrinhoDeCompras extends HttpServlet {
         ArrayList<CarrinhoModel> carrinho = util.parseCoookieParaModel(req,resp);
 
         try {
-            RequestDispatcher dispatcher = req.getRequestDispatcher("/src/main/webapp/carrinho.jsp");
+            RequestDispatcher dispatcher = req.getRequestDispatcher("/carrinho.jsp");
             req.setAttribute("carrinho", carrinho);
             dispatcher.forward(req, resp);
         }catch (Exception e){
