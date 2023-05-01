@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 
-@WebServlet(name = "detalheServlet", value = "/detalhe-servlet")
+@WebServlet(name = "detalheServlet", value = "/Nap_2/detalhe-servlet")
 public class DetalheServlet extends HttpServlet {
 
     /**

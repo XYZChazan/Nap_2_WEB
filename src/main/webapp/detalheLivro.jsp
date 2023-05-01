@@ -12,8 +12,8 @@
 
     <nav class="nav-principal">
       <ul style="display: flex; list-style-type: none;">
-        <li><a class="nav-link" href="/carrinho-servlet">Pagina inicial</a></li>
-        <li><a class="nav-link" href="/carrinho-compras">Carrinho</a></li>
+        <li><a class="nav-link" href="/Nap_2/carrinho-servlet">Pagina inicial</a></li>
+        <li><a class="nav-link" href="/Nap_2/carrinho-compras">Carrinho</a></li>
       </ul>
     </nav>
 
@@ -32,7 +32,7 @@
          <p>${livro.isbnTen}</p>
          <p>${livro.isbnThirteen}</p>
          <p>${livro.dimensao}</p>
-         <form action="/detalhe-servlet" method="post">
+         <form action="/Nap_2/detalhe-servlet" method="post">
             <input type="hidden" name="id" value="${livro.id}">
              <button type="submit">Adicionar ao carrinho</button>
          </form>

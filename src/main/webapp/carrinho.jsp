@@ -14,7 +14,7 @@
 
     <nav class="nav-principal">
       <ul style="display: flex; list-style-type: none;">
-        <li><a class="nav-link" href="/carrinho-servlet">Pagina inicial</a></li>
+        <li><a class="nav-link" href="/Nap_2/carrinho-servlet">Pagina inicial</a></li>
         <li><a class="nav-link" href="#">Carrinho</a></li>
       </ul>
     </nav>
@@ -34,7 +34,7 @@
                   <input type="number" name="quantity" id="quantity" value="${item.quantidade}" readonly>
                 </div>
               </div>
-              <form action="/carrinho-compras" method="post">
+              <form action="/Nap_2/carrinho-compras" method="post">
                 <div class="item-remove">
                    <input type="hidden" name="id" value="${item.id}">
                    <button type="submit">Remover</button>

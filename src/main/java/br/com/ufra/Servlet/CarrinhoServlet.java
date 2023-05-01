@@ -19,7 +19,7 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 
 
-@WebServlet(name = "carrinhoDeComprasServlet", value = "/carrinho-compras")
+@WebServlet(name = "carrinhoDeCompras", value = "/Nap_2/carrinho-servlet")
 public class CarrinhoServlet extends HttpServlet {
 
     /**
@@ -40,7 +40,7 @@ public class CarrinhoServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         try {
-            RequestDispatcher dispatcher = request.getRequestDispatcher("/PaginaInicialLoja.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/src/main/webapp/PaginaInicialLoja.jsp");
             request.setAttribute("listar", this.livros);
             dispatcher.forward(request, response);
         }catch (Exception e){

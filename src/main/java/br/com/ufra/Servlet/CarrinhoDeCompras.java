@@ -17,7 +17,7 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 
 
-@WebServlet(name = "carrinhoDeComprasServlet", value = "/carrinho-compras")
+@WebServlet(name = "carrinhoDeComprasServlet", value = "/Nap_2/carrinho-compras")
 public class CarrinhoDeCompras extends HttpServlet {
 
     /**

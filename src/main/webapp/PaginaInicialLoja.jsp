@@ -26,11 +26,11 @@
                 <p class="preco">R$ ${linha.preco}</p>
                 <p class="detalhe">${linha.detalhe}</p>
                 <div class="botoes">
-                <form action="/carrinho-servlet" method="post">
+                <form action="/Nap_2/carrinho-servlet" method="post">
                   <input type="hidden" name="id" value="${linha.id}">
                   <button type="submit" name="tipoOperacao" value="adicionar">Adicionar ao carrinho</button>
                 </form>
-                <form action="/detalhe-servlet" method="get">
+                <form action="/Nap_2/detalhe-servlet" method="get">
                   <input type="hidden" name="id" value="${linha.id}">
                   <button type="submit">Detalhar</button>
                 </form>
