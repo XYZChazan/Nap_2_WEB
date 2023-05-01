@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/functions" prefix = "fn" %>
 <%@ page import="java.util.ArrayList, br.com.ufra.Model.LivroModel"%>
@@ -13,7 +14,7 @@
     <nav class="nav-principal">
       <ul style="display: flex; list-style-type: none;">
         <li><a class="nav-link" href="#">Pagina inicial</a></li>
-        <li><a class="nav-link" href="/carrinho-compras">Carrinho</a></li>
+        <li><a class="nav-link" href="/Nap_2/carrinho-compras">Carrinho</a></li>
       </ul>
     </nav>
 

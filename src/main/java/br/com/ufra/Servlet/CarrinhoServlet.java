@@ -19,12 +19,13 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 
 
-@WebServlet(name = "carrinhoServlet", value = "/carrinho-servlet")
+@WebServlet(name = "carrinhoDeComprasServlet", value = "/carrinho-compras")
 public class CarrinhoServlet extends HttpServlet {
 
     /**
 	 * 
 	 */
+	
 	private static final long serialVersionUID = 1L;
 	ArrayList<LivroModel> livros;
     ArrayList<CarrinhoModel> carrinho;
@@ -39,7 +40,7 @@ public class CarrinhoServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         try {
-            RequestDispatcher dispatcher = request.getRequestDispatcher("/src/main/webapp/PaginaInicialLoja.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/PaginaInicialLoja.jsp");
             request.setAttribute("listar", this.livros);
             dispatcher.forward(request, response);
         }catch (Exception e){

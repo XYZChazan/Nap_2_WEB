@@ -65,6 +65,6 @@ public class CarrinhoDeCompras extends HttpServlet {
             }
             resp.addCookie(new Cookie("Carrinho", URLEncoder.encode( mapeador.writeValueAsString(carrinho), "UTF-8" )));
         }
-        resp.sendRedirect("/carrinho-compras");
+        resp.sendRedirect("/Nap_2/carrinho-compras");
     }
 }
