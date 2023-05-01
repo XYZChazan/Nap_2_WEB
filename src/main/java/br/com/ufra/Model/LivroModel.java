@@ -1,7 +1,6 @@
 package br.com.ufra.Model;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class LivroModel{
     private int id;

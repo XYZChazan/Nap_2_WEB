@@ -20,7 +20,11 @@ import java.util.ArrayList;
 @WebServlet(name = "carrinhoDeComprasServlet", value = "/carrinho-compras")
 public class CarrinhoDeCompras extends HttpServlet {
 
-    ArrayList<LivroModel> livros;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	ArrayList<LivroModel> livros;
     Util util = new Util();
     ObjectMapper mapeador = new ObjectMapper();
 

@@ -20,7 +20,11 @@ import java.util.ArrayList;
 @WebServlet(name = "detalheServlet", value = "/detalhe-servlet")
 public class DetalheServlet extends HttpServlet {
 
-    ArrayList<LivroModel> livros;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	ArrayList<LivroModel> livros;
     Util util = new Util();
 
     @Override

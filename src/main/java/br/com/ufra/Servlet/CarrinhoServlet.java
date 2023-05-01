@@ -14,18 +14,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
-import java.util.Enumeration;
-import java.util.Iterator;
 
 
 @WebServlet(name = "carrinhoServlet", value = "/carrinho-servlet")
 public class CarrinhoServlet extends HttpServlet {
 
-    ArrayList<LivroModel> livros;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	ArrayList<LivroModel> livros;
     ArrayList<CarrinhoModel> carrinho;
     Util util = new Util();
 
